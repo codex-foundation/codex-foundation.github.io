@@ -1,0 +1,145 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="/codex-logo-horizontal-dark.svg" alt="Codex Foundation" class="footer__logo-img" width="180" height="36" />
+        </div>
+        <p class="footer__tagline">Neutral infrastructure, governance & community for open source.</p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4 class="footer__col-title">Foundation</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/governance">Governance</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Community</h4>
+          <ul>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="footer__bottom">
+      <p class="footer__made">Built in Italy · Open to the world</p>
+      <p class="footer__copy">© {year} Codex Foundation</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-ink);
+    color: var(--color-parchment);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer__logo-img {
+    display: block;
+    height: 36px;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  .footer__tagline {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    max-width: 280px;
+  }
+
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer__col-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 1rem;
+  }
+
+  .footer__col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer__col a {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+
+  .footer__col a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .footer__made,
+  .footer__copy {
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer__links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>

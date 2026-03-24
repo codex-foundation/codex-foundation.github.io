@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Home"
+  description="Codex Foundation — Neutral infrastructure, governance, and community for open-source projects. Built in Italy, open to the world."
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <hr class="divider hero__divider-top animate" />
+      <p class="hero__eyebrow animate delay-1">NEUTRAL GROUND FOR OPEN SOURCE</p>
+      <hr class="divider hero__divider-mid animate delay-1" />
+      <h1 class="hero__title animate delay-2">CODEX / FOUNDATION</h1>
+      <p class="hero__subtitle animate delay-3">
+        Infrastructure, governance, and community for the open-source projects that power our world.
+      </p>
+      <div class="hero__ctas animate delay-4">
+        <a href="/projects" class="btn-primary">Explore Projects</a>
+        <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="btn-outline">Join on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="section pillars">
+    <div class="container">
+      <div class="pillars__grid">
+        <div class="pillar animate delay-1">
+          <div class="pillar__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="8" y="8" width="32" height="32" stroke="#C4522A" stroke-width="1.5"/>
+              <rect x="16" y="16" width="16" height="16" fill="#C4522A" opacity="0.2"/>
+              <line x1="24" y1="8" x2="24" y2="40" stroke="#C4522A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Infrastructure</h3>
+          <p class="pillar__text">Neutral hosting and technical infrastructure for open source projects, free from commercial influence.</p>
+        </div>
+
+        <div class="pillar animate delay-2">
+          <div class="pillar__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <polygon points="24,8 40,36 8,36" stroke="#C4522A" stroke-width="1.5" fill="none"/>
+              <circle cx="24" cy="28" r="4" fill="#C4522A" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Governance</h3>
+          <p class="pillar__text">Transparent, community-driven governance models that keep projects independent and accountable.</p>
+        </div>
+
+        <div class="pillar animate delay-3">
+          <div class="pillar__icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <circle cx="24" cy="24" r="16" stroke="#C4522A" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="6" fill="#C4522A" opacity="0.3"/>
+              <line x1="24" y1="8" x2="24" y2="16" stroke="#C4522A" stroke-width="1.5"/>
+              <line x1="24" y1="32" x2="24" y2="40" stroke="#C4522A" stroke-width="1.5"/>
+              <line x1="8" y1="24" x2="16" y2="24" stroke="#C4522A" stroke-width="1.5"/>
+              <line x1="32" y1="24" x2="40" y2="24" stroke="#C4522A" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Community</h3>
+          <p class="pillar__text">A welcoming, global community of contributors united by shared values of openness and collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About teaser -->
+  <section class="section about-teaser">
+    <div class="container">
+      <div class="about-teaser__grid">
+        <div class="about-teaser__quote animate">
+          <blockquote>"An independent home for projects that belong to everyone."</blockquote>
+        </div>
+        <div class="about-teaser__content animate delay-2">
+          <p>Codex Foundation was built on the principle that the most critical open-source projects deserve a home that is truly neutral — one that outlasts any company, trend, or individual contributor.</p>
+          <a href="/about" class="about-teaser__link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <h2 class="cta-banner__title animate">Building in the open</h2>
+      <p class="cta-banner__text animate delay-1">Follow our work on GitHub</p>
+      <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="btn-outline animate delay-2">View on GitHub</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    background-color: var(--color-ink);
+    color: var(--color-parchment);
+    display: flex;
+    align-items: center;
+    padding: 8rem 0 6rem;
+  }
+
+  .hero__inner {
+    max-width: 900px;
+  }
+
+  .hero__divider-top {
+    margin-bottom: 2rem;
+  }
+
+  .hero__divider-mid {
+    margin: 1.5rem 0;
+  }
+
+  .hero__eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+
+  .hero__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(5rem, 12vw, 10rem);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--color-parchment);
+    margin: 1.5rem 0;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(245, 240, 232, 0.75);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Pillars */
+  .pillars {
+    background-color: var(--color-parchment);
+  }
+
+  .pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .pillar__icon {
+    margin-bottom: 1.5rem;
+  }
+
+  .pillar__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: var(--color-ink);
+  }
+
+  .pillar__text {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.75;
+  }
+
+  /* About teaser */
+  .about-teaser {
+    background-color: var(--color-parchment-dark);
+  }
+
+  .about-teaser__grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-teaser__quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-ink);
+    line-height: 1.3;
+    border-left: 3px solid var(--color-gold);
+    padding-left: 2rem;
+  }
+
+  .about-teaser__content p {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .about-teaser__link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-terracotta);
+    text-decoration: none;
+  }
+
+  .about-teaser__link:hover {
+    text-decoration: underline;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .cta-banner__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-banner__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-white);
+  }
+
+  .cta-banner__text {
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .pillars__grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .about-teaser__grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>

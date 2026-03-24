@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const ways = [
+  {
+    icon: '⌥',
+    title: 'Contribute Code',
+    description: 'Submit pull requests, fix bugs, build features across our projects.',
+  },
+  {
+    icon: '✦',
+    title: 'Improve Docs',
+    description: 'Great documentation is the foundation of a great project. Help us make ours better.',
+  },
+  {
+    icon: '◎',
+    title: 'Mentor Others',
+    description: 'Share your knowledge with newer contributors and help grow the community.',
+  },
+  {
+    icon: '◈',
+    title: 'Support Financially',
+    description: 'Individual and corporate sponsorships help sustain our infrastructure and events.',
+  },
+];
+---
+
+<BaseLayout
+  title="Community"
+  description="Join the Codex Foundation community — contribute, mentor, and build together."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate">Community</h1>
+      <p class="subtitle animate delay-1">Open source is a human endeavor.</p>
+    </div>
+  </header>
+
+  <!-- Join section -->
+  <section class="section join-section">
+    <div class="container">
+      <div class="join-intro animate">
+        <h2>Get Involved</h2>
+        <p>There are many ways to get involved with Codex Foundation.</p>
+      </div>
+
+      <div class="ways-grid">
+        {ways.map((way, i) => (
+          <div class={`way-card animate delay-${i + 1}`}>
+            <div class="way-card__icon">{way.icon}</div>
+            <h3 class="way-card__title">{way.title}</h3>
+            <p class="way-card__desc">{way.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Channels -->
+  <section class="section channels-section">
+    <div class="container">
+      <h2 class="channels-title animate">Community Channels</h2>
+      <div class="channels-grid">
+        <div class="channel animate delay-1">
+          <h3 class="channel__name">GitHub Discussions</h3>
+          <p class="channel__desc">The primary venue for technical discussion, proposals, and project-level conversations.</p>
+          <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="channel__link">Visit GitHub →</a>
+        </div>
+
+        <div class="channel animate delay-2">
+          <h3 class="channel__name">Mailing List</h3>
+          <p class="channel__desc">For announcements, newsletter updates, and broader Foundation communications.</p>
+          <a href="mailto:community@codex.foundation" class="channel__link">community@codex.foundation</a>
+        </div>
+
+        <div class="channel animate delay-3">
+          <h3 class="channel__name">Community Calls</h3>
+          <p class="channel__desc">Community calls are held monthly. Check our GitHub for schedule and meeting notes.</p>
+          <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="channel__link">View schedule →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values banner -->
+  <section class="values-banner">
+    <div class="container">
+      <p class="values-banner__text animate">We are committed to a harassment-free, inclusive community for everyone.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Join */
+  .join-section {
+    background-color: var(--color-parchment);
+  }
+
+  .join-intro {
+    margin-bottom: 3rem;
+  }
+
+  .join-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  .join-intro p {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+  }
+
+  .ways-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .way-card {
+    padding: 2rem 1.5rem;
+    background-color: var(--color-parchment-dark);
+    border-top: 2px solid var(--color-gold);
+  }
+
+  .way-card__icon {
+    font-size: 1.5rem;
+    color: var(--color-terracotta);
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .way-card__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .way-card__desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.7;
+  }
+
+  /* Channels */
+  .channels-section {
+    background-color: var(--color-parchment-dark);
+  }
+
+  .channels-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    color: var(--color-ink);
+  }
+
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .channel {
+    padding: 2rem;
+    background-color: var(--color-parchment);
+    border-left: 3px solid var(--color-terracotta);
+  }
+
+  .channel__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .channel__desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .channel__link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-terracotta);
+    text-decoration: none;
+  }
+
+  .channel__link:hover {
+    text-decoration: underline;
+  }
+
+  /* Values banner */
+  .values-banner {
+    background-color: var(--color-sage);
+    color: var(--color-white);
+    padding: 4rem 0;
+  }
+
+  .values-banner__text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 300;
+    font-style: italic;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1024px) {
+    .ways-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .ways-grid,
+    .channels-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const principles = [
+  {
+    number: '01',
+    name: 'Neutrality',
+    description: 'No single company, contributor, or ideology controls the Foundation or its projects.',
+  },
+  {
+    number: '02',
+    name: 'Transparency',
+    description: 'All decisions are made in public. Meeting notes, financial reports, and bylaws are openly accessible.',
+  },
+  {
+    number: '03',
+    name: 'Meritocracy',
+    description: 'Influence is earned through contribution and demonstrated commitment to the community.',
+  },
+  {
+    number: '04',
+    name: 'Sustainability',
+    description: 'Long-term health of projects and contributors is prioritized over short-term growth.',
+  },
+];
+
+const structure = [
+  {
+    role: 'Board of Directors',
+    description: 'Provides oversight and fiduciary responsibility for the Foundation. Ensures alignment with mission and values.',
+  },
+  {
+    role: 'Technical Committee',
+    description: 'Reviews and approves project acceptance into the Foundation. Sets technical standards and best practices.',
+  },
+  {
+    role: 'Project Maintainers',
+    description: 'Handle day-to-day governance of individual projects. Accountable to their project communities.',
+  },
+  {
+    role: 'Community Assembly',
+    description: 'The general member body. Participates in elections, proposals, and Foundation-wide decisions.',
+  },
+];
+---
+
+<BaseLayout
+  title="Governance"
+  description="Codex Foundation governance — principles, structure, and legal framework."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate">Governance</h1>
+      <p class="subtitle animate delay-1">Transparent by design. Accountable by commitment.</p>
+    </div>
+  </header>
+
+  <!-- Principles -->
+  <section class="section principles-section">
+    <div class="container">
+      <h2 class="section-title animate">Our Principles</h2>
+      <div class="principles-list">
+        {principles.map((p, i) => (
+          <div class={`principle animate delay-${i + 1}`}>
+            <span class="principle__number">{p.number}</span>
+            <div class="principle__content">
+              <h3 class="principle__name">{p.name}</h3>
+              <p class="principle__desc">{p.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Structure -->
+  <section class="section structure-section">
+    <div class="container">
+      <h2 class="section-title animate">Organizational Structure</h2>
+      <div class="structure-grid">
+        {structure.map((item, i) => (
+          <div class={`structure-card animate delay-${i + 1}`}>
+            <h3 class="structure-card__role">{item.role}</h3>
+            <p class="structure-card__desc">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal -->
+  <section class="section legal-section">
+    <div class="container">
+      <div class="legal-inner animate">
+        <h2 class="section-title">Legal</h2>
+        <p>Codex Foundation is a registered non-profit organization. Annual reports and financial statements are published on this site.</p>
+        <div class="legal-links">
+          <a href="#" class="btn-primary">Read our bylaws →</a>
+          <a href="#" class="btn-outline dark">Download financial report →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Principles */
+  .principles-section {
+    background-color: var(--color-parchment);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 300;
+    color: var(--color-ink);
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-parchment-dark);
+  }
+
+  .principles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .principle {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .principle__number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--color-terracotta);
+    line-height: 1;
+  }
+
+  .principle__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .principle__desc {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.75;
+  }
+
+  /* Structure */
+  .structure-section {
+    background-color: var(--color-parchment-dark);
+  }
+
+  .structure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .structure-card {
+    background-color: var(--color-parchment);
+    padding: 2rem;
+    border-left: 3px solid var(--color-gold);
+  }
+
+  .structure-card__role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--color-ink);
+    margin-bottom: 0.75rem;
+  }
+
+  .structure-card__desc {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* Legal */
+  .legal-section {
+    background-color: var(--color-parchment);
+  }
+
+  .legal-inner p {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline.dark {
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+
+  .btn-outline.dark:hover {
+    background-color: var(--color-ink);
+    color: var(--color-parchment);
+  }
+
+  @media (max-width: 768px) {
+    .principle {
+      grid-template-columns: 60px 1fr;
+      gap: 1rem;
+    }
+
+    .principle__number {
+      font-size: 3rem;
+    }
+
+    .structure-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

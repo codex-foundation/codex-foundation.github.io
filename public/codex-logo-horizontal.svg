@@ -1,0 +1,6 @@
+<svg width="300" height="60" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="2" width="56" height="56" rx="10" fill="#111111"/>
+  <text x="28" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="22" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">&lt;<tspan fill="#CC2200">/</tspan>&gt;</text>
+  <text x="74" y="38" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="800" fill="#111111" letter-spacing="2">CODEX</text>
+  <text x="75" y="53" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" font-weight="400" fill="#111111" letter-spacing="5.5" opacity="0.45">FOUNDATION</text>
+</svg>

@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: 'Codex CLI',
+    description: 'A developer-friendly command-line toolkit for managing open-source project workflows.',
+    language: 'Go',
+    status: 'Active',
+  },
+  {
+    name: 'Meridian',
+    description: 'Distributed configuration management for modern infrastructure teams.',
+    language: 'Rust',
+    status: 'Active',
+  },
+  {
+    name: 'Portale',
+    description: 'Community portal framework for open-source organizations and foundations.',
+    language: 'TypeScript',
+    status: 'Active',
+  },
+  {
+    name: 'Archivio',
+    description: 'Long-term archival and documentation system for open-source project history.',
+    language: 'Python',
+    status: 'Active',
+  },
+  {
+    name: 'Rete',
+    description: 'Peer-to-peer networking library optimized for collaborative, decentralized applications.',
+    language: 'Rust',
+    status: 'Active',
+  },
+  {
+    name: 'Fondamenta',
+    description: 'Shared base libraries and utilities used across the Codex Foundation ecosystem.',
+    language: 'TypeScript',
+    status: 'Active',
+  },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  description="Open source projects under the Codex Foundation umbrella."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate">Projects</h1>
+      <p class="subtitle animate delay-1">Open source, openly governed.</p>
+    </div>
+  </header>
+
+  <section class="section projects-section">
+    <div class="container">
+      <p class="projects-intro animate">Open source projects under the Codex Foundation umbrella. Each project maintains its own governance while benefiting from shared infrastructure and community.</p>
+
+      <div class="projects-grid">
+        {projects.map((project, i) => (
+          <article class={`project-card animate delay-${(i % 5) + 1}`}>
+            <div class="project-card__header">
+              <h3 class="project-card__name">{project.name}</h3>
+              <div class="project-card__badges">
+                <span class="badge badge--lang">{project.language}</span>
+                <span class="badge badge--status">{project.status}</span>
+              </div>
+            </div>
+            <p class="project-card__desc">{project.description}</p>
+            <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="project-card__link">
+              View on GitHub →
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="projects-cta animate">
+        <hr class="divider" />
+        <p>Don't see your project? We welcome new members.</p>
+        <a href="/contact" class="btn-primary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .projects-section {
+    background-color: var(--color-parchment);
+  }
+
+  .projects-intro {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    max-width: 680px;
+    line-height: 1.8;
+    margin-bottom: 3.5rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .project-card {
+    background-color: var(--color-white);
+    border: 1px solid rgba(184, 150, 62, 0.3);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-card__name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-ink);
+  }
+
+  .project-card__badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .badge--lang {
+    background-color: rgba(92, 107, 90, 0.1);
+    color: var(--color-sage);
+    border: 1px solid rgba(92, 107, 90, 0.3);
+  }
+
+  .badge--status {
+    background-color: rgba(196, 82, 42, 0.1);
+    color: var(--color-terracotta);
+    border: 1px solid rgba(196, 82, 42, 0.3);
+  }
+
+  .project-card__desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .project-card__link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-terracotta);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .project-card__link:hover {
+    text-decoration: underline;
+  }
+
+  .projects-cta {
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .projects-cta p {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Codex Foundation."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate">Contact</h1>
+      <p class="subtitle animate delay-1">We'd love to hear from you.</p>
+    </div>
+  </header>
+
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-wrap animate">
+          <h2 class="contact-form-title">Send a message</h2>
+          <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" required class="form-input" placeholder="What is this regarding?" />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" required rows={5} class="form-input form-textarea" placeholder="Your message..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info animate delay-2">
+          <h2 class="contact-info-title">Get in touch</h2>
+
+          <div class="contact-info-item">
+            <h3 class="contact-info-label">GitHub</h3>
+            <a href="https://github.com/codex-foundation" target="_blank" rel="noopener noreferrer" class="contact-info-link">
+              github.com/codex-foundation
+            </a>
+          </div>
+
+          <div class="contact-info-item">
+            <h3 class="contact-info-label">Email</h3>
+            <a href="mailto:contact@codex.foundation" class="contact-info-link">
+              contact@codex.foundation
+            </a>
+          </div>
+
+          <div class="contact-info-item">
+            <h3 class="contact-info-label">Location</h3>
+            <div class="contact-location">
+              <span class="contact-location-tag">Italy</span>
+              <p>Based in Italy, serving the global open-source community.</p>
+            </div>
+          </div>
+
+          <p class="contact-response-note">We typically respond within 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-section {
+    background-color: var(--color-parchment);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-form-title,
+  .contact-info-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--color-ink);
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  .form-input {
+    background-color: transparent;
+    border: 1px solid var(--color-parchment-dark);
+    padding: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--color-ink);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-terracotta);
+  }
+
+  .form-input::placeholder {
+    color: var(--color-ink-muted);
+    opacity: 0.5;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  /* Contact info */
+  .contact-info-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-parchment-dark);
+  }
+
+  .contact-info-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-info-link {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-terracotta);
+    text-decoration: none;
+  }
+
+  .contact-info-link:hover {
+    text-decoration: underline;
+  }
+
+  .contact-location {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-location-tag {
+    display: inline-block;
+    background-color: var(--color-sage);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    align-self: flex-start;
+  }
+
+  .contact-location p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.5;
+  }
+
+  .contact-response-note {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

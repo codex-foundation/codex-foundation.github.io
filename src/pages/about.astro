@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about Codex Foundation — our story, mission, vision, and values."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="animate">About the Foundation</h1>
+      <p class="subtitle animate delay-1">Our story, our mission, our commitment to open source.</p>
+    </div>
+  </header>
+
+  <!-- Story -->
+  <section class="section story">
+    <div class="container">
+      <div class="story__grid">
+        <div class="story__lead animate">
+          <h2>Founded in Italy.<br />Built for the world.</h2>
+        </div>
+        <div class="story__body animate delay-2">
+          <p>Codex Foundation was born from a belief that open source deserves a truly neutral home — a place where projects can grow without commercial pressure, vendor lock-in, or political bias.</p>
+          <p>We believe that the software infrastructure powering the modern world should be governed by those who use it, maintained with long-term sustainability in mind, and accessible to everyone — regardless of their background or resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission / Vision / Values -->
+  <section class="section mvv">
+    <div class="container">
+      <div class="mvv__grid">
+        <div class="mvv__card animate delay-1">
+          <div class="mvv__label">Mission</div>
+          <h3>What we do</h3>
+          <p>To provide the infrastructure, governance, and community support that open-source projects need to thrive independently.</p>
+        </div>
+
+        <div class="mvv__card animate delay-2">
+          <div class="mvv__label">Vision</div>
+          <h3>Where we're going</h3>
+          <p>A world where critical open-source infrastructure is governed transparently and sustainably by its community.</p>
+        </div>
+
+        <div class="mvv__card animate delay-3">
+          <div class="mvv__label">Values</div>
+          <h3>What guides us</h3>
+          <ul class="mvv__values">
+            <li>Neutrality</li>
+            <li>Transparency</li>
+            <li>Sustainability</li>
+            <li>Inclusivity</li>
+            <li>Excellence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Italian roots -->
+  <section class="italian-roots">
+    <div class="container">
+      <p class="italian-roots__text animate">Italy has a long tradition of craftsmanship and institutional trust. We carry that tradition into the digital age.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Story */
+  .story {
+    background-color: var(--color-parchment);
+  }
+
+  .story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .story__lead h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    color: var(--color-ink);
+    line-height: 1.2;
+  }
+
+  .story__body p {
+    color: var(--color-ink-muted);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  /* MVV */
+  .mvv {
+    background-color: var(--color-parchment-dark);
+  }
+
+  .mvv__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .mvv__card {
+    background-color: var(--color-parchment);
+    padding: 2.5rem;
+    border-top: 3px solid var(--color-gold);
+  }
+
+  .mvv__label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .mvv__card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+  }
+
+  .mvv__card p {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .mvv__values {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .mvv__values li {
+    font-weight: 300;
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-terracotta);
+  }
+
+  /* Italian roots */
+  .italian-roots {
+    background-color: var(--color-sage);
+    color: var(--color-white);
+    padding: 5rem 0;
+  }
+
+  .italian-roots__text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .story__grid,
+    .mvv__grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
