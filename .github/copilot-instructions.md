@@ -1,6 +1,13 @@
 # Copilot Instructions — Codex Foundation Website
 
-## Commands
+## Deployment
+
+Deployed to **GitHub Pages** via GitHub Actions at `https://codex-foundation.github.io`.
+
+Workflow: `.github/workflows/deploy.yml` — triggers on push to `main`.  
+Pipeline: **Test** (pnpm coverage) → **Build** (astro build) → **Deploy** (actions/deploy-pages).
+
+To enable Pages on a new repo: Settings → Pages → Source → **GitHub Actions**.
 
 ```bash
 pnpm dev        # start dev server (http://localhost:4321)
