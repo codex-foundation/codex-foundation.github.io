@@ -1,18 +1,18 @@
 ---
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Governance', href: '/governance' },
-  { label: 'Community', href: '/community' },
-  { label: 'Contact', href: '/contact' },
+	{ label: "Home", href: "/" },
+	{ label: "About", href: "/about" },
+	{ label: "Projects", href: "/projects" },
+	{ label: "Governance", href: "/governance" },
+	{ label: "Community", href: "/community" },
+	{ label: "Contact", href: "/contact" },
 ];
 
 const pathname = Astro.url.pathname;
 
 function isActive(href: string): boolean {
-  if (href === '/') return pathname === '/';
-  return pathname.startsWith(href);
+	if (href === "/") return pathname === "/";
+	return pathname.startsWith(href);
 }
 ---
 

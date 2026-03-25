@@ -1,21 +1,24 @@
 {
-  "name": "codex-foundation",
-  "type": "module",
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "coverage": "vitest run --coverage"
-  },
-  "dependencies": {
-    "astro": "^5.0.0"
-  },
-  "devDependencies": {
-    "vitest": "^3.0.0",
-    "@vitest/coverage-v8": "^3.0.0"
-  }
+	"name": "codex-foundation",
+	"type": "module",
+	"version": "0.1.0",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"coverage": "vitest run --coverage",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write ."
+	},
+	"dependencies": {
+		"astro": "^5.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.8",
+		"@vitest/coverage-v8": "^3.0.0",
+		"vitest": "^3.0.0"
+	}
 }
