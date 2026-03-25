@@ -13,6 +13,9 @@
 		"lint": "biome check .",
 		"lint:fix": "biome check --write ."
 	},
+	"engines": {
+		"node": ">=22.12.0"
+	},
 	"dependencies": {
 		"astro": "^6.0.8"
 	},
