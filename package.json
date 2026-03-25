@@ -14,7 +14,7 @@
 		"lint:fix": "biome check --write ."
 	},
 	"dependencies": {
-		"astro": "^5.0.0"
+		"astro": "^6.0.8"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.8",
