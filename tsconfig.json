@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": ["src/**/*", "vitest.config.mjs"],
-  "exclude": ["node_modules", "dist"]
+	"extends": "astro/tsconfigs/strict",
+	"include": ["src/**/*", "vitest.config.mjs"],
+	"exclude": ["node_modules", "dist"]
 }
